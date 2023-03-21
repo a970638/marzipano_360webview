@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotspot Styles | Marzipano</title>
+<meta name="description" content="Showcase some hotspot styles and effects that may be created with CSS." />
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style>@-ms-viewport { width: device-width; }</style>
+<link rel="stylesheet" href="//www.marzipano.net/demos/common/reset.css">
+<link rel="stylesheet" href="//www.marzipano.net/demos/common/hint.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- Base viewer. -->
+<div id="pano">
+  <div>
+    <button onclick="btn1()">任務簡介</button>
+    <button onclick="btn2()">任務目標</button>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="vendor/marzipano.js" ></script>
+<script src="index.js"></script>
+
+
+<!--
+  Hotspot examples.
+  Each hotspot has CSS, HTML and Javascript code.
+-->
+
+
+
+<!-- Tooltip using the hint.css library -->
+
+<link rel="stylesheet" href="css/hintspot.css">
+
+<div id="hintspot" class="hint--right hint--info hint--bounce" data-hint="到田裡看看">
+  <a href="../view1/index.html" target="_self">
+    <img src="img/hotspot.png" >
+  </a>
+</div>
+
+<div id="hintspot2" class="hint--right hint--info hint--bounce" data-hint="到房子裡看看">
+  <a href="../view3/index.html" target="_self">
+    <img src="img/hotspot.png" >
+  </a>
+</div>
+
+<script src="js/hintspot.js" ></script>
+
+
+<!-- HTML5 tooltip with animation  -->
+
+<link rel="stylesheet" href="css/tooltip.css">
+
+<div id="tooltip">
+  <div class="out">
+    <div class="in">
+      <div class="image"></div>
+    </div>
+  </div>
+  <div class="tip">
+    <p>酸菜經過日曬、風乾，在未完全乾燥前撕成長條狀塞入玻璃瓶中，塞得越緊越不易發霉，封緊再將其倒置，讓水分往下流，此階段為「福菜」(客語: 覆菜 pugˋcoi )，早期是將酸菜塞入甕中，現在改用真空包裝。</p>
+    <img src="img/福菜.jpg">
+  </div>
+</div>
+
+<div id="tooltip2">
+  <div class="out">
+    <div class="in">
+      <div class="image"></div>
+    </div>
+  </div>
+  <div class="tip">
+    <p>這些農民正在將第一階段的酸菜持續日曬、風乾至水分完全乾燥，綑綁成團後便形成第三階段的梅乾菜 (客語: 鹹菜乾 hamˇcoi gonˊ)</p>
+    <!-- <img src="img/福菜.jpg"> -->
+  </div>
+</div>
+
+<script src="js/tooltip.js" ></script>
+
+
+<!-- Display HTML modal on click -->
+
+<link rel="stylesheet" href="css/info.css">
+
+<div id="info">
+  <div class="icon_wrapper">
+    <div class="icon">
+      <div id="inner_icon" class="inner_icon">
+        <div class="icon1"></div>
+        <div class="icon2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="tip">
+    <p>地上這些是甚麼呢？</p>
+  </div>
+  <div class="content">
+  <!-- <div class="image-wrapper">
+     <img src="img/marzipano.png">
+  </div> -->
+    <div class="content-form">
+      <!-- <p>一開始的酸菜若持續日曬、風乾至水分完全乾燥，綑綁成團便形成梅乾菜，地上這些就是正在日曬的梅乾菜喔！ (客語: 鹹菜乾 hamˇcoi gonˊ)</p> -->
+      <!-- <div>
+        <input id="email" type="text" placeholder="Email">
+      </div> -->
+      <!-- <p>Just kidding, this doesn't do anything</p> -->
+      <form name="q2">
+        <input id="Q2" style="height: 30px; font-size: 12px;" value="請輸入你的回答">
+      </form>
+      <button onclick="send2();">確認</button>
+    </div>
+    <!-- <div class="button_wrapper">
+      <button class="close">Close</button>
+    </div> -->
+  </div>
+</div>
+s
+<script src="js/info.js" ></script>
+
+
+<!-- Rotate and show content on hover -->
+
+<!-- <link rel="stylesheet" href="css/rotate.css">
+
+<div id="rotate-hotspot" class="rotate-hotspot">
+  <div class="rotate-img"></div>
+  <div class="rotate-content">
+    <h1>Marzipano</h1>
+    <p>a 360º media viewer for the modern web</p>
+  </div>
+</div>
+
+<script src="js/rotate.js" ></script> -->
+
+
+<!-- show content on hover -->
+
+<link rel="stylesheet" href="css/reveal.css">
+
+<div id="reveal">
+  <img src="img/photo.png">
+  <div class="reveal-content">
+    <img src="img/醃菜.jpg">
+    <p>芥菜採收置於田中，日曬1~3天進行軟化，之後利用粗鹽醃製，一層芥菜一層粗鹽，讓鹽充分融入葉莖根，再用石頭或重物加壓1~2周，就形成鹹酸爽脆的「酸菜」(客語: 鹹菜 hamˇcoi )。</p>
+  </div>
+</div>
+
+<script src="js/reveal.js" ></script>
+
+
+<!-- Display HTML modal on click -->
+
+<!-- <link rel="stylesheet" href="css/textInfo.css">
+
+<div id="textInfo">
+  <div class="hotspot">
+    <div class="out"></div>
+    <div class="in"></div>
+  </div>
+  <div class="tooltip-content">
+    <p style="font-size: 20px;">你知道酸菜、福菜的區別嗎?</p>
+    <p style="font-size: 20px;">又是什麼蔬菜加工製作而成的呢?</p>
+    <p style="font-size: 20px;">可以在場景中尋找答案喔</p>
+    <input style="height: 30px; font-size: 12px;" value="請輸入你的回答">
+  </div>
+</div>
+
+<script src="js/textInfo.js"></script> -->
+
+
+<!-- More info about something -->
+
+<!-- <link rel="stylesheet" href="css/expand.css">
+
+<div id="expand">
+<h1 class="title">Human</h1>
+  <img class="icon" src="img/human.png" >
+  <p>坐在椅子上的人</p>
+
+</div>
+
+<script src="js/expand.js"></script> -->
+
+
+</body>
+</html>

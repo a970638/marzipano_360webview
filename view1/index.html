@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotspot Styles | Marzipano</title>
+<meta name="description" content="Showcase some hotspot styles and effects that may be created with CSS." />
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style>@-ms-viewport { width: device-width; }</style>
+<link rel="stylesheet" href="//www.marzipano.net/demos/common/reset.css">
+<link rel="stylesheet" href="//www.marzipano.net/demos/common/hint.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div>
+  
+</div>
+
+<!-- Base viewer. -->
+<div id="pano">
+  <div>
+    <button onclick="btn1()">任務簡介</button>
+    <button onclick="btn2()">任務目標</button>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="vendor/marzipano.js" ></script>
+<script src="index.js"></script>
+
+
+<!--
+  Hotspot examples.
+  Each hotspot has CSS, HTML and Javascript code.
+-->
+
+
+
+<!-- Tooltip using the hint.css library -->
+
+<link rel="stylesheet" href="css/hintspot.css">
+
+<div id="hintspot" class="hint--right hint--info hint--bounce" data-hint="到這邊看看">
+  <a href="../view2/index.html" target="_self">
+    <img src="img/hotspot.png" >
+  </a>
+</div>
+
+<div id="hintspot2" class="hint--right hint--info hint--bounce">
+  <!-- <a href="../view2/index.html" target="_self"> -->
+    <img src="img/bug.png" >
+  </a>
+</div>
+
+<div id="hintspot3" class="hint--right hint--info hint--bounce" data-hint="回到房子裡">
+  <a href="../view0/index.html" target="_self">
+    <img src="img/hotspot.png" >
+  </a>
+</div>
+
+<script src="js/hintspot.js" ></script>
+
+
+<!-- HTML5 tooltip with animation  -->
+
+<link rel="stylesheet" href="css/tooltip.css">
+
+<div id="tooltip">
+  <div class="out">
+    <div class="in">
+      <div class="image"></div>
+    </div>
+  </div>
+  <div class="tip">
+    <p>不同的"菜"</p>
+    <img src="img/img1.png">
+  </div>
+</div>
+
+
+<div id="tooltip2">
+  <div class="out">
+    <div class="in">
+      <div class="image"></div>
+    </div>
+  </div>
+  <div class="tip">
+    <p>跟著季節走讀公館鄉</p>
+    <img src="img/v1.jpg">
+  </div>
+</div>
+
+<div id="tooltip3">
+  <div class="out">
+    <div class="in">
+      <div class="image"></div>
+    </div>
+  </div>
+  <div class="tip">
+    <p>芥菜育苗</p>
+    <img src="img/v1_1.jpg">
+  </div>
+</div>
+
+<div id="tooltip4">
+  <div class="out">
+    <div class="in">
+      <div class="image"></div>
+    </div>
+  </div>
+  <div class="tip">
+    <p>愛吃芥菜的蟲蟲及生病的芥菜</p>
+    <img src="img/v1_2.jpg">
+  </div>
+</div>
+
+<script src="js/tooltip.js" ></script>
+
+
+<!-- Display HTML modal on click -->
+
+<link rel="stylesheet" href="css/info.css">
+
+<div id="info">
+  <div class="icon_wrapper">
+    <div class="icon">
+      <div id="inner_icon" class="inner_icon">
+        <div class="icon1"></div>
+        <div class="icon2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="tip">
+    <p>請問下列何者是芥菜的育苗方式呢?</p>
+  </div>
+  <div class="content">
+  <!-- <div class="image-wrapper">
+     <img src="img/marzipano.png">
+  </div> -->
+    <div class="content-form">
+      <!-- <p>「芥菜」是客家人過年必吃的年菜，稱之「長年菜」(客語: congˇngienˇcoi )，芥菜經過第一個階段的加工處理就會形成酸菜，接下來，來去看看第一階段的處理過程吧!</p> -->
+      <img src="img/v1_q2.jpg">
+      <!-- <div> -->
+        <!-- <input id="email" type="text" placeholder="Email"> -->
+        <form name="q1">
+          <input type="radio" name="selection" value="a">A、塊莖 <br>
+          <input type="radio" name="selection" value="b">B、種子 <br>
+          <input type="radio" name="selection" value="c">C、塊根 <br>
+        </form>
+      <!-- </div> -->
+      
+      <button onclick="send1();">確認</button>
+    </div>
+    <!-- <div class="button_wrapper">
+      <button class="close">Close</button>
+    </div> -->
+  </div>
+</div>
+
+<!-- <div id="info2">
+  <div class="icon_wrapper2">
+    <div class="icon">
+      <div id="inner_icon2" class="inner_icon">
+        <div class="icon1"></div>
+        <div class="icon2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="tip">
+    <p>下列圖片裡，哪一個是種植芥菜主要的害蟲呢?</p>
+  </div>
+  <div class="content"> -->
+  <!-- <div class="image-wrapper">
+     <img src="img/marzipano.png">
+  </div> -->
+    <!-- <div class="content-form">
+      <img src="img/v1_q1.jpg">
+      
+      <form name="q1_2">
+        <input type="radio" name="selection1" value="a">A、黃粉蟲(麵包蟲) <br>
+        <input type="radio" name="selection1" value="b">B、蚯蚓 <br>
+        <input type="radio" name="selection1" value="c">C、紋白蝶幼蟲 <br>
+      </form>
+      
+      
+      <button onclick="send1_2();">確認</button>
+    </div> -->
+    <!-- <div class="button_wrapper">
+      <button class="close">Close</button>
+    </div> -->
+  <!-- </div>
+</div> -->
+
+<script src="js/info.js" ></script>
+
+<!-- Rotate and show content on hover -->
+
+<!-- <link rel="stylesheet" href="css/rotate.css">
+
+<div id="rotate-hotspot" class="rotate-hotspot">
+  <div class="rotate-img"></div>
+  <div class="rotate-content">
+    <h1>Marzipano</h1>
+    <p>a 360º media viewer for the modern web</p>
+  </div>
+</div>
+
+<script src="js/rotate.js" ></script> -->
+
+
+<!-- show content on hover -->
+
+<!-- <link rel="stylesheet" href="css/reveal.css">
+
+<div id="reveal">
+  <img src="img/photo.png">
+  <div class="reveal-content">
+    <img src="img/photo.jpg">
+    <p>Unloading of the coal.</p>
+  </div>
+</div>
+
+<script src="js/reveal.js" ></script> -->
+
+
+<!-- Display HTML modal on click -->
+
+<!-- <link rel="stylesheet" href="css/textInfo.css">
+
+<div id="textInfo">
+  <div class="hotspot">
+    <div class="out"></div>
+    <div class="in"></div>
+  </div>
+  <div class="tooltip-content">
+    <h1 style="font-size: 20px;">猜猜看，這裡是哪裡呢？</h1>
+    <form>
+      <input type="radio" name="location" value="Taipei">A、苗栗公館<br>
+      <input type="radio" name="location" value="Taoyuan">B、桃園大溪<br>
+      <input type="radio" name="location" value="Taipei">C、新竹北埔<br>
+      <input type="radio" name="location" value="Taoyuan">D、宜蘭礁溪<br>
+      
+    </form>
+    
+  </div>
+</div>
+
+<script src="js/textInfo.js"></script> -->
+
+
+<!-- More info about something -->
+
+<!-- <link rel="stylesheet" href="css/expand.css">
+
+<div id="expand">
+<h1 style="margin-top: 17px;" class="title">芥菜的一生</h1>
+  <img class="icon" src="img/human.png" >
+  <p>8月~9月"栽種成長期"：育苗、整地種植、施肥、病蟲害防治</p>
+  <p>10月~12月"採收加工期"：酸菜(鹹菜)、福菜(覆菜)、梅乾菜(鹹菜乾)、榨菜</p>
+</div>
+
+<script src="js/expand.js"></script> -->
+
+
+</body>
+</html>
